@@ -24,6 +24,3 @@ hs_err_pid*
 
 # Internally used
 bin/
-apidoc/
-bak/
-test.images/
