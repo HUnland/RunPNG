@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="content">
+	<head>
+		<meta charset="UTF-8">
+		<title>Start</title>
+		<link rel="stylesheet" href="../manual.css" />
+	</head>
+	<body class="content">
+		<div class="contentframe">
+			<div class="contenttitle">
+				<p>Effekte</p>
+			</div>
+			<div class="contenttext">
+			
+				<p>Neben der Animation bietet RunPNG noch ein paar nützliche Effekte an. Diese werden fest mit dem fertigen Bild verbunden, denn das
+				allgemein gültige PNG-Format besitzt solche Effektzusätze nicht. Zwar ließen sich durchaus eigene Datenblöcke für so etwas definieren, die
+				würde dann aber außer RunPNG keine andere Software verstehen.</p>
+
+				<p>Die Effekte finden sich unter dem gleichnamigen Tabulator in der Seitenleiste.</p> 
+
+				<p class="contentsubtitle">Effektauswahl</p>
+				
+				<p>
+					<img class="hcenter" src="images/runpng-effects.png" width="340"/>
+				</p>
+				
+				<p>In der Auswahlliste stehen zurzeit vier Optionen zur Verfügung.</p>
+				
+				<p><b>Maske:</b> Wer mit Grafikprogrammen vertraut ist, kennt vielleicht die Funktionalität der Ebenenmaske. Dabei handelt es sich
+				um eine Maskierung der Grafik mit einem Graustufenbild. Wobei die Farbe Weiß volle Darstellung bedeutet und Schwarz völlige
+				Transparenz. Die Nuancen dazwischen lassen die Grafik stärker oder schwächer durchscheinend aussehen.</p>
+				
+				<p><b>Hintergrund:</b> Der Hintergrund kann eine einfache Farbe, ein hinzugeladenes Bild oder beides sein. Wie der Name bereits sagt,
+				liegt der Hintergrund hinter der Grafik bzw. Bildsequenz.</p>
+				
+				<p><b>Vordergrund:</b> Der Vordergrund kann ebenfalls eine einfache Farbe, ein hinzugeladenes Bild oder beides sein. Der Vordergrund
+				liegt vor der Grafik. Wobei die einfache Farbe zumindest durchscheinend sein sollte. Sonst würde man von der animierten Bildsequenz
+				nichts sehen. Ähnlich verhält es sich mit einem hinzugeladenen Bild, das ebenfalls Transparenzen aufweisen sollte.</p>
+				
+				<p><b>Flussgenerator:</b> Hierbei handelt es sich genau genommen nicht um einen Effekt, der auf eine Bildsequenz angewendet wird.
+				Der Flussgenerator erzeugt eine neue Bildsequenz auf Basis eines hinzugeladenen Bildes. Das heißt, eine vielleicht zuvor geladene Bildsequenz
+				würde bei Anwendung des Flussgenerators überschrieben.</p>
+				
+				<p>Die genannten Effekte lassen sich natürlich auch gemeinsam verwenden.</p>
+				
+				<p class="contentsubtitle">Bildkasten</p>
+				
+				<p>Die einzelnen Effekte werden auf eigenen Seiten beschrieben. Hier soll es noch um das Element Bildkasten gehen, das auf allen Effektseiten vertreten ist.</p>
+				
+				<img class="hcenter" src="images/effects-picbox0.png" width="340"/>
+				
+				<p>In den Bildkasten wird ein einzelnes Bild mit Klick auf die <img class="button-inline" src="../images/button-folder.png" /> - Taste geladen.
+				Mithilfe der <img class="button-inline" src="../images/button-trashbin.png" /> - Taste lässt sich das Bild wieder entfernen.</p>
+				
+				<p>An der linken Seite des Bildkastens befinden sich fünf Schaltflächen. Diese Schaltflächen dienen der Skalierung eines geladenen Bildes
+				zum Zwecke der Anpassung. Skalierung ist jedoch nur möglich und sinnvoll wenn das geladene Bild andere Dimensionen besitzt als die, mit der
+				die Applikation arbeitet. Ist eine Dimension - Breite oder Höhe - größer, kann sie gestaucht werden. Ist sie kleiner, kann man sie dehnen.
+				Nehmen wir die folgende Ellipse als Beispiel. Das Bild findet sich unter <b>RunPNG/doc/samples/various/green-ellipse.png</b>.</p>
+				
+				<img class="hcenter" src="images/effects-picbox1.png" width="400"/>
+				
+				<p>Laut Tooltip hat die Ellipse 126 x 96 Pixel, während die Applikation in diesem Fall auf 256 x 256 Pixel eingestellt ist. Es besteht also
+				Wachstumspotenzial in beide Richtungen. In diesem Moment ist noch keine Vergrößerungsstufe gewählt. Die einzelnen Skalierungsstufen sehen
+				wie folgt aus.</p> 
+				
+				<table>
+				<tr valign="top">
+				<td><img class="button-inline" src="../images/button-scale-sym.png" /></td>
+				<td><b>Symmetrische Skalierung:</b> Das Bild wird unter Beibehaltung des Seitenverhältnisses skaliert.</td>
+				<td><img src="../images/effects-picbox-sym.png" width="150"/><td>
+				</tr>  
+				<tr valign="top">
+				<td><img class="button-inline" src="../images/button-scale-asym.png" /></td>
+				<td><b>Asymmetrische Skalierung:</b> Das Bild wird auf die relative Breite und Höhe der Applikation skaliert.</td>
+				<td><img src="../images/effects-picbox-asym.png" width="150"/><td>
+				</tr>  
+				<tr valign="top">
+				<td><img class="button-inline" src="../images/button-scale-horz.png" /></td>
+				<td><b>Horizontale Skalierung:</b> Das Bild wird auf die relative Breite der Applikation skaliert. Die Höhe bleibt unverändert.</td>
+				<td><img src="../images/effects-picbox-horz.png" width="150"/><td>
+				</tr>  
+				<tr valign="top">
+				<td><img class="button-inline" src="../images/button-scale-vert.png" /></td>
+				<td><b>Vertikale Skalierung:</b> Das Bild wird auf die relative Höhe der Applikation skaliert. Die Breite bleibt unverändert.</td>
+				<td><img src="../images/effects-picbox-vert.png" width="150"/><td>
+				</tr>
+				<tr valign="top">
+				<td><img class="button-inline" src="../images/button-scale-reset.png" /></td>
+				<td><b>Skalierung zurücksetzen:</b> Das Bild wird auf seine eigenen Maße relativ zur Größe der Applikation zurückgesetzt.</td>
+				<td><img src="../images/effects-picbox-reset.png" width="150"/><td>
+				</tr>
+				</table>
+				
+				<p class="contentsubtitle">Überspringe erstes Bild</p>
+				
+				<p>Die Effekte wie Maske, Hintergrund und Vordergrund haben unterhalb des Bildkastens noch ein Optionsfeld für das Überspringen des ersten Bildes.
+				Das ist dafür gedacht den Effekt im Falle des Modus <b>Animiert, überspringe erstes Bild</b> nicht anzuwenden. Es liegt im Ermessen des Anwenders, das zu
+				nutzen. Im Falle der Modi <b>Animiert</b> oder <b>Nicht animiert</b> ergäbe es indes seltener Sinn, das Optionsfeld anzuklicken.</p>
+
+				<img class="hcenter" src="../images/Beach ball 256x256.png" width="128" />
+
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="content">
+	<head>
+		<meta charset="UTF-8">
+		<title>Start</title>
+		<link rel="stylesheet" href="../manual.css" />
+	</head>
+	<body class="content">
+		<div class="contentframe">
+			<div class="contenttitle">
+				<p>Eine erste Animation</p>
+			</div>
+			<div class="contenttext">
+			
+				<p class="contentsubtitle">Einlesen einer Bildsequenz</p>
+			
+				<p>Beginnen wir mit einer bereits vorbereiteten Bildsequenz und machen daraus ein animiertes PNG. Die Einzelbilder dafür sind im Ordner
+				<b>RunPNG/doc/samples/sprockets 3/</b> gespeichert.</p> 
+				
+				<div class="hcenter">
+					<img style="float: left; margin-right: 10px;" src="images/menu-file.png" width="300"/>
+					<img src="../images/files-open.png" width="72"/><br clear="all" />
+				</div>
+								
+				<p>Zunächst starten wir RunPNG. Im Menü <b>Datei</b> befindet sich der Eintrag <b>Bilderserie öffnen ...</b>. Analog dazu lässt sich auch
+				die dazu gehörige Schaltfläche in der Werkzeugleiste verwenden. Klickt man auf eines der beiden, erscheint ein <b>Bilderserie öffnen</b>-Dialog.</p>
+				
+				<img class="hcenter" src="images/filechooser-open-files.png" width="550"/>
+				
+				<p>Dieser Dialog lässt eine Mehrfachauswahl zu. Für das Laden aller 15 Bilder klicken wir erst auf das Bild links oben und dann mit gedrückter
+				Hochstelltaste auf das Bild rechts unten. Damit sind alle Bilder gewählt. Zuletzt noch auf <b>Öffnen</b> klicken und RunPNG lädt die ganze Bilderserie
+				in den Speicher.</p>
+				
+				<img class="hcenter" src="images/application-sprockets.png" width="768" />
+				
+				<p>Wir haben jetzt eine Serie von 15 Bildern im Arbeitsspeicher der Applikation. Auf den ersten Blick zeigt sich bei den einzelnen Bildern
+				kaum ein Unterschied. Doch er ist da. Beim ersten Bild steht das Zahnrad noch gerade. Beim zweiten ist es um nur 2° im Uhrzeigersinn
+				gedreht, beim dritten um 4°, dann um 6° usw. Das ergibt beim letzten (15.) Bild eine Drehung von 28°.</p>
+				
+				<p>Der Grund: Das dargestellte Zahnrad besitzt 12 Zähne. 360° geteilt durch 12 ergibt 30°. In der Bildsequenz wird sich das Zahnrad nur um 28° drehen.
+				Wenn das Bild mit 30° Drehung erscheinen sollte, springt die Darstellung jedoch wieder auf Bild #0 zurück und die Abfolge beginnt neu. Dadurch sieht es so
+				aus, als würde sich das Zahnrad kontinuierlich weiterdrehen. Auf diese Art spart man sich viel Arbeit, Speicherplatz und ggf. Übertragungszeiten im
+				Internet. Denn für eine volle Umdrehung in 2°-Schritten bräuchten wir 180 Einzelbilder. Was beim vorliegenden Material nicht viel Sinn ergäbe.</p>
+				
+				<p class="contentsubtitle">Einstellen der Animation</p>
+			
+				<p>
+					<img class="hcenter" src="images/animated-loops.png" width="340"/>
+				</p>
+				
+				<p>Als Nächstes muss die Applikation wissen, in welcher Art animiert werden soll. Dazu gibt es drei Möglichkeiten:</p>
+				<ul>
+					<li><b>Nicht animiert</b> erklärt sich von selbst. Mit dieser Einstellung würde nur das erste Einzelbild als einfache PNG-Datei gespeichert.</li>
+					<li><b>Animiert</b> bedeutet, dass alle Einzelbilder in die Animationsschleife einbezogen werden.</li>
+					<li><b>Animiert, überspringe erstes Bild</b> ist für Anzeigeprogramme gedacht die u. U. noch keine animierten PNG-Dateien darstellen können.
+					Oder es vielleicht nicht sollen. Dort würde dann nur das erste Bild gezeigt. Das auch z. B. einen Hinweis darauf enthalten könnte, dass
+					animierte PNG-Dateien nicht unterstützt werden.</li> 
+				</ul>
+				
+				<p>Gleich darunter lässt sich die Anzahl der Wiederholungen einstellen. Die Zahl 0 bedeutet eine endlose Wiederholung solange das Bild gezeigt wird.
+				Eine höhere Zahl begrenzt die Wiederholungen auf den eingegebenen Wert. Letzteres ist für Anwendungsfälle gedacht in denen sich eine fortwährende
+				Wiederholung eventuell als störend erweisen könnte.</p>
+
+				<p>Die weiteren Einstellungen an diesem Tabulator werden an anderer Stelle behandelt.</p>
+				
+				<p class="contentsubtitle">Einstellen der Verzögerungszeit</p>
+				
+				<p>
+					<img class="hcenter" src="images/animated-delay.png" width="340"/>
+				</p>
+
+				<p>Unter dem Tabulator "Einzelbild" kommen wir nun zur Verzögerungszeit der Einzelbilder. D. h. wie lange ein Bild gezeigt wird, bis das darstellende Programm
+				zum nächsten Bild wechseln soll. Eine Einstellung von 0 ist möglich und wird im APNG-Standard auch ausdrücklich akzeptiert. Was dann bedeutet, dass
+				das Programm den Bildwechsel so schnell wie möglich vornehmen soll.</p>
+
+				<p>Besagter APNG-Standard sieht für die Zeitangabe einen Bruch in Sekunden vor: Zähler / Nenner. Was z. B. 1/10 Sekunde aber mit 60/1 auch eine Minute
+				dauern kann. Hier lässt sich ein Minimalwert von 1/1000 s und ein Maximalwert von 65.535/1 s (&gt; 18 h) einstellen.
+				RunPNG bietet als Komfortfunktion noch die Eingabe von Millisekunden an und wandelt das in einen Bruch um.</p>
+
+				<p>Die hier vorgenommenen Einstellungen beziehen sich zunächst jeweils auf das aktuell gewählte Einzelbild, so dass mit individuellen Werten gearbeitet
+				werden kann. Mit Klick auf die Schaltfläche <b>Verzögerung für alle Bilder</b> lässt sich die Darstellungszeit auch auf alle anderen Bilder übertragen.
+				Stellen wir hier einfach mal eine Verzögerungszeit von 100 ms bzw. 1/10 s für alle Bilder ein. Oder einen anderen Wert wenn gewünscht.</p>
+				
+				<img class="hcenter" src="images/animated-series.png" width="530"/>
+				
+				<p>Dann sieht das in der unteren Bildleiste in etwa so aus. Die Einzelbilder zeigen nun die gewählte Darstellungs- bzw Verzögerungszeit.
+				Kleiner Tipp: Wenn man mit dem Mauszeiger etwas über einem Einzelbild verweilt erscheint ein kleines Fenster - Tooltip genannt - mit Informationen
+				über das Bild. (Was hier noch nicht so spannend ist, weil alle Bilder gleich groß sind.)</p>
+
+				<p class="contentsubtitle">Animation ausprobieren</p>
+			
+				<p class="hcenter">
+					<img style="float: left; margin-right: 10px;" src="images/menu-player.png" width="133"/>
+					<img src="../images/player-play.png" width="72"/><br clear="all" />
+				</p>
+				
+				<p>Nun lässt sich die neue Animation ausprobieren. Dazu klickt man im Menü <b>Spieler</b> auf den Eintrag <b>Abspielen</b> oder auf das obige Symbol
+				in der Werkzeugleiste.</p>
+				
+				<img class="hcenter" src="../images/player-pause.png" width="72"/>
+				
+				<p>Zum Beenden des Abspielens auf die obige Schaltfläche klicken, die an der Stelle der Schaltfläche <b>Abspielen</b> erscheint.</p>
+				
+				<p class="contentsubtitle">Animation speichern</p>
+				
+				<p class="hcenter">
+					<img style="float: left; margin-right: 10px;" src="images/menu-file-saveas.png" width="266"/>
+					<img src="../images/file-saveas.png" width="72"/><br clear="all" />
+				</p>
+				
+				<p>Zuletzt wird die Animation abgespeichert. Entweder über das Menü <b>Datei</b> und dem Eintrag <b>Speichern als Bild ...</b> oder über
+				die abgebildete Schaltfläche in der Werkzeugleiste.</p>
+				
+				<p><b>Anmerkung:</b> RunPNG kann die Bilder mit der Endung <b>.png</b> oder <b>.apng</b> speichern. Laut englischer Wikipedia sind beide als
+				Dateinamenserweiterung für APNG-Dateien gebräuchlich. Die deutsche Wikipedia gibt in einem deutlich ärmlicheren Artikel
+				nur <b>.png</b> an. Mozilla selbst äußert sich gar nicht zur Dateinamensendung und verkündet nur den MIME type <b>image/apng</b> als offiziell
+				registrierte Kennung bei der IANA (Internet Assigned Numbers Authority). Windows 10 weiß mit der Endung <b>.apng</b> nicht so recht etwas
+				anzufangen. Einschlägige Grafikprogramme kennen die Endung <b>.apng</b> sowieso nicht. Es erscheint also empfehlenswert die APNG-Dateien mit der
+				Endung <b>.png</b> abzuspeichern. Analog zu animierten GIF-Dateien, die für gewöhnlich auch nicht mit der Endung <b>.agif</b> gespeichert werden.</p>
+				
+				<img class="hcenter" src="../images/Sprocket 3 256x256.png" width="80" />
+			
+			</div>
+		</div>
+	</body>
+</html>

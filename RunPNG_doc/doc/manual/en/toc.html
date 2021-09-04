@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="toc">
+	<head>
+		<meta charset="UTF-8">
+		<title>User's Guide</title>
+		<link rel="stylesheet" href="../manual.css" />
+		<script type="text/javascript">
+			function sendToParent(strPurpose, strItem)
+			{
+				var data = new Object();
+				data.source = "toc";
+				data.purpose = strPurpose;
+				data.item = strItem;
+				parent.postMessage(data, "*");
+			}
+		
+			function tocItemClick(element, strItem)
+			{
+				var ul = element.parentElement;
+				
+				for (var n = 0, nLen = ul.children.length; n < nLen; n++)
+				{
+					var li = ul.children[n];
+					li.classList.remove("selected");
+				}
+				
+				element.classList.add("selected");
+				
+				sendToParent("item-click", strItem);
+			}
+			
+			function initialize()
+			{
+				tocItemClick(document.getElementById('start'), 'start');
+			}
+
+		</script>
+	</head>
+	<body class="toc" onload="initialize()">
+		<div class="toc title">
+			<p>Table of Contents</p>
+		</div>
+		<ul class="toc" id="toc">
+			<li class="toc item" id="start" onclick="tocItemClick(this, 'start')">
+				<p>Start</p>
+			</li>
+			<li class="toc item" onclick="tocItemClick(this, 'what-is-runpng')">
+				<p>What is RunPNG?</p>
+			</li>
+			<li class="toc item" onclick="tocItemClick(this, 'user-interface')">
+				<p>User Interface</p>
+			</li>
+			<li class="toc item" onclick="tocItemClick(this, 'a-first-animation')">
+				<p>A First Animation</p>
+			</li>
+			<li class="toc item" onclick="tocItemClick(this, 'frames-handling')">
+				<p>Single Frames Handling</p>
+			</li>
+			<li class="toc item" onclick="tocItemClick(this, 'frame-sizes')">
+				<p>Frame Sizes</p>
+			</li>
+			<li class="toc item" onclick="tocItemClick(this, 'optimization')">
+				<p>Optimization of Frames</p>
+			</li>
+			<li class="toc item" onclick="tocItemClick(this, 'project')">
+				<p>Project File</p>
+			</li>
+			<li class="toc item" onclick="tocItemClick(this, 'effects')">
+				<p>Effects</p>
+			</li>
+			<li class="toc item indent1" onclick="tocItemClick(this, 'effect-background')">
+				<p>Background</p>
+			</li>
+			<li class="toc item indent1" onclick="tocItemClick(this, 'effect-foreground')">
+				<p>Foreground</p>
+			</li>
+			<li class="toc item indent1" onclick="tocItemClick(this, 'effect-mask')">
+				<p>Mask</p>
+			</li>
+			<li class="toc item indent1" onclick="tocItemClick(this, 'generator-float')">
+				<p>Flux Generator </p>
+			</li>
+		</ul>
+	</body>
+</html>
