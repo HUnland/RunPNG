@@ -390,7 +390,7 @@ public class AppFileManager
 		File file = chooser.showSaveDialog(m_app.getMainWindow());
 		if (file != null)
 		{
-			savePngFile(file, m_app.getFramesView().createSequence(false, true, false), true);
+			savePngFile(file, m_app.getFramesView().createSequence(false, true, false), m_fileProject == null);
 
 			m_filePng = file;
 
@@ -416,7 +416,8 @@ public class AppFileManager
 			saveProjectFile(m_fileProject);
 			return true;
 		}
-		else if (m_filePng != null)
+
+		if (m_filePng != null)
 		{
 			savePngFile(m_filePng, m_app.getFramesView().createSequence(false, true, false), true);
 			return true;
