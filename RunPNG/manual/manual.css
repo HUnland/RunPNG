@@ -1,0 +1,274 @@
+@charset "ISO-8859-1";
+
+/*
+	Copyright 2021 H. Unland (https://github.com/HUnland)
+	
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	
+	    http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+*/
+
+html.main, body.main
+{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+html.content, body.content
+{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 130%;
+}
+
+html.toc, body.toc
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.mainbox
+{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	height: 100%;
+}
+
+.mainbox .horizontal.header
+{
+	text-align: center;
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-basis: auto;
+	
+	font-size: 18px;
+	font-weight: bold;
+	
+	background-image: linear-gradient(to bottom, #ffffff, #e0e0e0 90%, #d0d0d0);
+}
+
+.mainbox .horizontal.header p
+{
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.mainbox .horizontal.content
+{
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: auto;
+}
+
+.horizontal.content .vertical
+{
+	/*border: 1px dotted blue;*/
+	
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	height: 100%;
+}
+
+.horizontal.content .vertical.contentlist
+{
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-basis: auto;
+}
+
+.horizontal.content .vertical.contentbox
+{
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: auto;
+}
+
+.mainbox .horizontal.footer
+{
+	text-align: center;
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-basis: auto;
+
+	font-size: 12px;
+
+	background-image: linear-gradient(to bottom, #ffffff, #b0b0b0 97%);
+}
+
+.mainbox .horizontal.footer p
+{
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+iframe#contentlist
+{
+	border: none;
+	background-color: #f0f0f0;
+	width: 200px;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto; 
+}
+
+iframe#contentbox
+{
+	border: none;
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.hcenter
+{
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.vcenter
+{
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+}
+
+table
+{
+	border-collapse: collapse;
+}
+
+td
+{
+	padding: 6px;
+}
+
+ul.toc
+{
+	padding: 0;
+	list-style-type: none;
+}
+
+.toc.title
+{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.toc.item
+{
+	margin: 0;
+	padding: 4px 10px;
+}
+
+.toc.item.selected
+{
+	background-color: #d0d0d0;
+}
+
+.toc.item.indent1
+{
+	margin: 0;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 20px;
+	padding-right: 10px;
+}
+
+.toc.item:hover
+{
+	background-color: #c0c0c0;
+}
+
+.toc.item p
+{
+	cursor: default;
+	margin: 0;
+	font-weight: bold;
+}
+
+.contentframe
+{
+	/*border: 1px dotted red;*/
+	
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	height: 100%;
+}
+
+.contentframe.start
+{
+	background-image: linear-gradient(to bottom right, #ffffff, #c0c0c0);
+}
+
+.contenttitle
+{
+	/*border: 1px dotted red;*/
+	
+	text-align: center;
+	width: 100%;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.contentsubtitle
+{
+	text-align: left;
+	margin-top: 24px;
+	margin-bottom: 0;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.contentflex-horz
+{
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: auto;
+}
+
+.contentflex-horz p
+{
+	text-align: center;
+}
+
+.contenttext
+{
+	text-align: justify;
+	margin: 0;
+	padding-left: 20px;
+	padding-top: 0;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+img.button-inline
+{
+	display: inline;
+	height: 22px;
+	vertical-align: text-bottom;
+}

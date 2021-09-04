@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+	Copyright 2021 H. Unland (https://github.com/HUnland)
+	
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	
+	    http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+-->
+<html class="content">
+	<head>
+		<meta charset="UTF-8">
+		<title>Start</title>
+		<link rel="stylesheet" href="../manual.css" />
+	</head>
+	<body class="content">
+		<div class="contentframe">
+			<div class="contenttitle">
+				<p>Foreground</p>
+			</div>
+			<div class="contenttext">
+
+				<p>A foreground color should be translucent to transparent so that you can see something of the actual graphic. The same applies to the
+				foreground image. To try out this effect, we first load an animated beach ball into the working memory. The image is located at
+				<b>RunPNG/doc/samples/various/Beach ball 256x256.png</b>. It is an APNG file and consists of 20 individual images.
+				We don't need to change any setting. Or we continue to use the picture from the Background section, as shown here.</p>
+				
+				<img class="hcenter" src="images/effect-foreground-color.png" width="340"/>
+				
+				<p>The <b>Foreground</b> effect can be found under the <b>Effects</b> tab. Let's start with the Foreground color. To do this, click on
+				the color selector and choose any color. E.g. black. And we see that we see no picture anymore. The reason is already explained above.
+				The foreground color needs to be made translucent using the <b>Opacity</b> slider. 100% corresponds to full coverage, 0% is completely
+				transparent.</p>
+				
+				<img class="hcenter" src="images/effect-foreground.png" width="768"/>
+				
+				<p>With only 10% opacity, there is now a slight haze over the image. The selected color foreground has an immediate effect on all
+				individual images and is blended over the colors behind it.</p>
+				
+				<img class="hcenter" src="images/effect-foreground-net.png" width="768"/>
+				
+				<p>Now a foreground image is added. It's located at <b>RunPNG/doc/samples/various/net orange.png</b>. Beach, beach ball, net seems
+				to be a suitable combination. But you can see that the foreground image is too big. It has 512 x 512 pixels. Whoever likes it can leave
+				it that way. The protruding parts are removed by the application when the images are put together.</p>
+
+				<img class="hcenter" src="images/effect-foreground-net-sym.png" width="768"/>
+				
+				<p>Or you can scale the foreground image symmetrically with the button <img class="button-inline" src="../images/button-scale-sym.png" />.
+				This would make the net finer-meshed.</p>
+				
+				<img class="hcenter" src="../images/Beach ball 256x256 yellow bgnd grass and net.png" width="150"/>
+
+			</div>
+		</div>
+	</body>
+</html>

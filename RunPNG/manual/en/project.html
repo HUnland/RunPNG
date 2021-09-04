@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+	Copyright 2021 H. Unland (https://github.com/HUnland)
+	
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	
+	    http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+-->
+<html class="content">
+	<head>
+		<meta charset="UTF-8">
+		<title>Start</title>
+		<link rel="stylesheet" href="../manual.css" />
+	</head>
+	<body class="content">
+		<div class="contentframe">
+			<div class="contenttitle">
+				<p>Project File</p>
+			</div>
+			<div class="contenttext">
+			
+				<p class="contentsubtitle">The Point of a Project File</p>
+				
+				<p>If you load a sequence of individual images or a complete animation into RunPNG, the original individual images in the memory
+				always remain unchanged. If changes take place, this is always done with a copy for display. This copy is also only available once,
+				in order not to unnecessarily inflate the storage requirements.</p>
+				
+				<p>No matter how many individual steps the user undertakes in their work, they can either be undone with the <b>Undo</b> function, or the
+				user simply switches the option in question off again.</p>
+				
+				<p>This behavior is nice and useful. But after the APNG file has been saved and another image has been loaded, all changes are permanent.
+				Because only the result of the work is saved. The finished file knows nothing of the individual work steps.</p>
+				
+				<p>This is where the project file comes into play. The project file contains the individual images and effect images in their original form
+				and all work steps that are relevant for the creation of the image. However, it does not contain the <b>Undo</b> memory or deleted individual images.</p>
+			
+				<p class="contentsubtitle">Save a Project File</p>
+
+				<div class="hcenter">
+					<img style="float: left; margin-right: 10px;" src="images/menu-file-saveas-project.png" width="266"/>
+					<img src="../images/file-saveas-project.png" width="72"/><br clear="all" />
+				</div>
+
+				<p>Saving a project file is as easy as saving the image. There is also the <b>Save as Project ...</b> item in the <b>File</b> menu or
+				the associated button in the toolbar. </p>
+				
+				<img class="hcenter" src="images/filechooser-saveas-project.png" width="550"/>
+				
+				<p>The project will be saved with the extension <b>.rpz</b>. "rpz" stands for <b>R</b>unPNG <b>P</b>roject <b>Z</b>ipped. Which already says something
+				about the nature of the file. It is a compressed ZIP file that can easily be opened with WinZip, 7-Zip and similar programs. It contains the original
+				images in PNG format as well as metadata in XML format for the restoration of the work steps.</p>
+				
+				<p>But even if we find the familiar ZIP format here: Just look, don't touch. More precisely, do not change anything. Because that could make the project
+				file unusable. </p> 
+
+				<img class="hcenter" src="../images/3d2 256x256.png" width="128" />
+
+			</div>
+		</div>
+	</body>
+</html>

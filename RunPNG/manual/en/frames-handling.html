@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+	Copyright 2021 H. Unland (https://github.com/HUnland)
+	
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	
+	    http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+-->
+<html class="content">
+	<head>
+		<meta charset="UTF-8">
+		<title>Start</title>
+		<link rel="stylesheet" href="../manual.css" />
+	</head>
+	<body class="content">
+		<div class="contentframe">
+			<div class="contenttitle">
+				<p>Single Frames Handling</p>
+			</div>
+			<div class="contenttext">
+			
+				<p class="contentsubtitle">Reading of Single Frames</p>
+
+				<p>An image sequence does not always have to be read in in a single process, but can also be compiled image by image.
+				There are some colored squares to try out in the <b>RunPNG/doc/samples/squares 1/</b> folder. </p> 
+
+				<div class="hcenter">
+					<img style="float: left; margin-right: 10px;" src="images/menu-file.png" width="300"/>
+					<img src="../images/file-open.png" width="72"/><br clear="all" />
+				</div>
+
+				<p>First we start RunPNG. In the <b>File</b> menu there is the <b>Open ...</b> entry. The corresponding button in the toolbar can also
+				be used in the same way. If you click on one of the two, an <b>Open File</b> dialog appears. </p>
+
+				<img class="hcenter" src="images/filechooser-open-file.png" width="550"/>
+				
+				<p>This dialog allows only a single selection. We mark the picture <b>Frame # 1.png</b> with the mouse and click on <b>Open</b>. Then RunPNG loads the picture into the memory.</p>
+				
+				<img class="hcenter" src="images/application-squares1.png" width="768" />
+				
+				<p>The first picture is loaded. It is displayed as the selected image and also specifies the application size (see title bar above).
+				Of course, no meaningful animation can be created with a single image. So we load another picture by clicking with the right
+				mouse button on the symbol picture in the lower picture bar. </p>
+
+				<img class="hcenter" src="images/context-squares1.png" width="256"/>
+				
+				<p>A context menu appears that offers the <b>Add Image ...</b> item among other functions. With this we load <b>Frame #2.png</b>. The loaded image
+				appears to the right of the image for which the context menu was called. We do the same with frames #3 to #5. In this way, images can also be easily fetched
+				from other folders.</p>				
+
+				<img class="hcenter" src="images/context-squares2.png" width="480"/>
+				
+				<p>Now we have a small sequence of five images that can be animated as described in <b>A First Animation</b>. A delay time of 500 ms or longer is recommended here,
+				otherwise it will be too flickering. </p>
+				
+				<p class="contentsubtitle">Duplicate, Save and Delete of Single Frames</p>
+				
+				<p>
+					<img class="hcenter" src="images/context-squares3.png" width="480"/>
+				</p>
+
+				<p>Individual images can also be duplicated, saved or deleted using the context menu. Simply right-click on the relevant picture and select the desired
+				function in the context menu.</p>
+				
+				<p><b>Note:</b> If there is only one picture left in the bar, you cannot delete it with the context menu. </p> 
+				
+				<p class="contentsubtitle">Image Order</p>
+				
+				<p>
+					<img class="hcenter" src="images/context-squares4.png" width="480"/>
+				</p>
+				
+				<p>The order of the individual images can be changed by clicking on an image and moving it to the left or right with the mouse button pressed.
+				Don't be confused because of the indexes. The frames box renumbers the frames right after releasing the mouse button.</p>
+
+				<img class="hcenter" src="../images/Squares 1 256x256.png" width="80" />
+			
+			</div>
+		</div>
+	</body>
+</html>

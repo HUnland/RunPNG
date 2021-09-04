@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+	Copyright 2021 H. Unland (https://github.com/HUnland)
+	
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	
+	    http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+-->
+<html class="content">
+	<head>
+		<meta charset="UTF-8">
+		<title>Start</title>
+		<link rel="stylesheet" href="../manual.css" />
+	</head>
+	<body class="content">
+		<div class="contentframe">
+			<div class="contenttitle">
+				<p>Mask</p>
+			</div>
+			<div class="contenttext">
+
+				<p>As already mentioned at another place in this manual, the mask effect is somewhat similar to the layer mask in a graphics editor.
+				This is a masking of the graphic with a greyscale image. Whereby the color white means full representation and black means complete
+				transparency. The nuances in between let the graphics shine through more or less.</p>
+				
+				<p>The subject of the mask application should be the APNG file <b>RunPNG/doc/samples/various/throbber 256x256.png</b>. We load it
+				into RunPNG (it consists of 80 individual images). Then we select the <b>Mask</b> effect under the <b>Effects</b> tab.</p>
+
+				<img class="hcenter" src="images/effect-mask.png" width="768"/>
+
+				<p>Unlike the picture boxes for the other effects, the box for the mask effect does not have a transparent background, but a white one.
+				Transparencies are not possible here. In addition, there is no color picker. Just a slider with which you can increase or decrease the
+				opacity. The term opacity here refers to the loaded graphic itself. If the <b>Opacity</b> slider is moved to 0%, the background in the
+				box is black and the graphic is invisible. At 50% there is a visible graphic, but it is very translucent.</p>
+				
+				<p>This would already explain the purpose of the full-surface mask. And why the area in the image box is white by default. A change
+				directly affects the loaded pictures and makes them translucent. Which enables interesting effects on a website against a corresponding
+				background. But let's set the opacity slider back to 100% and take a short excursion to the <b>Foreground</b> effect.</p>
+				
+				<img class="hcenter" src="images/effect-mask-foreground.png" width="340"/>
+				
+				<p>In the <b>Foreground</b> effect, we load the file <b>RunPNG/doc/samples/various/Sprocket 3.png</b> into the image box and return to
+				the mask effect. Now the animation can let off steam behind the gear. But when you start the player, the animation breaks out to the
+				left and right of the gear.</p>
+				
+				<img class="hcenter" src="images/effect-mask-run.png" width="768"/>
+				
+				<p>But we don't want that. We want to limit the representation of the animation to the hole in the middle of the gear. So we stop the
+				player and load the mask <b>RunPNG/doc/samples/various/Mask 3.png</b> into the picture box of the <b>Mask</b> effect. </p>
+				
+				<img class="hcenter" src="images/effect-mask-loaded.png" width="768"/>
+				
+				<p>And that's the end of the breakout. The image for the mask of course follows the same rules as the setting with the <b>Opacity</b>
+				slider. White is full opacity, black is full transparency. Whereby it doesn't have to be limited to gaudy black and white. There are
+				also gradients with grayscale possible. In this way, interesting animations can be punched out.</p>
+				
+				<p><b>Note:</b> When using a full mask image, the slider no longer has any effect. Unless the mask image has transparent areas.
+				Just an idea. </p> 
+
+				<img class="hcenter" src="../images/throbber 256x256 foreground and mask.png" width="150"/>
+
+			</div>
+		</div>
+	</body>
+</html>
