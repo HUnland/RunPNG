@@ -153,8 +153,8 @@ public class FramePane extends VBox implements Toggle
 	 * Called by the application in case of an app image size change. It dispatches the
 	 * new sizes to the thumbnail.
 	 *
-	 * @param nWidth The new image width.
-	 * @param nHeight The new image height.
+	 * @param nAppWidth The new image width.
+	 * @param nAppHeight The new image height.
 	 */
 	public void appSizeChanged(int nAppWidth, int nAppHeight)
 	{

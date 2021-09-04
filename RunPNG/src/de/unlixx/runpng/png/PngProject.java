@@ -173,6 +173,7 @@ public class PngProject
 	 * @param strType A string containing the type (xml, png, ...).
 	 * @param strUsage A string describing the usage (meta, sequence, ...).
 	 * @param strName A string with the storage filename.
+	 * @param index An index or null if not needed.
 	 * @param strComment An optional comment or null.
 	 */
 	public void addFileDescription(String strType, String strUsage, String strName, Integer index, String strComment)

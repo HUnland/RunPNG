@@ -448,7 +448,7 @@ public class Util
 	 * Creates an instant tooltip for short term in the current language.
 	 *
 	 * @param strId A string corresponding with an id in the resource files.
-	 * @args A variable arguments list.
+	 * @param args A variable arguments list.
 	 * @return A new {@link Tooltip} object.
 	 */
 	public static Tooltip createInstantTooltip(String strId, Object... args)

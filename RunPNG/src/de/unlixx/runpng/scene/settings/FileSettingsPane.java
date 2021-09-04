@@ -433,6 +433,7 @@ public class FileSettingsPane extends AbstractSettingsPane
 	 * Applies the recently applied size to a FramePane.
 	 *
 	 * @param pane A {@link FramePane} object.
+	 * @return An {@link Image} object with the resulting image.
 	 */
 	protected Image applyFrameSize(FramePane pane)
 	{
