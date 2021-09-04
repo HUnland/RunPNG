@@ -286,10 +286,7 @@ public class Util
 
 						is.close();
 					}
-					catch (IOException e)
-					{
-						//e.printStackTrace();
-					}
+					catch (IOException e) { }
 				}
 
 				return version;
