@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE menusandbars PUBLIC "-//unlixx.de//RunPNG//EN" "menusandbars.dtd">
+<menusandbars>
+	<menubar id="menubar.main">
+		<menu id="menu.file">
+			<menuitem id="menu.file.new" icon="icons/32x32/file.new.png" accel="Ctrl+N" />
+			<separator />
+			<menuitem id="menu.file.open" icon="icons/32x32/file.open.png" accel="Ctrl+O" />
+			<menuitem id="menu.files.open" icon="icons/32x32/files.open.png" accel="Shift+Ctrl+O" />
+			<separator />
+			<menuitem id="menu.file.save" icon="icons/32x32/file.save.png" accel="Ctrl+S" />
+			<menuitem id="menu.file.saveas" icon="icons/32x32/file.saveas.png" accel="Shift+Ctrl+S" />
+			<menuitem id="menu.file.saveas.project" icon="icons/32x32/file.saveas.project.png" accel="Shift+Ctrl+P" />
+		</menu>
+		<menu id="menu.edit">
+			<menuitem id="menu.edit.undo" icon="icons/32x32/edit.undo.png" accel="Ctrl+Z" />
+			<menuitem id="menu.edit.redo" icon="icons/32x32/edit.redo.png" accel="Ctrl+Y" />
+			<!-- <separator /> -->
+		</menu>
+		<menu id="menu.player">
+			<menuitem id="menu.player.first" icon="icons/32x32/player.first.png" />
+			<menuitem id="menu.player.prev" icon="icons/32x32/player.prev.png" />
+			<dualusemenuitem id="menu.player.play" id2="menu.player.pause" icon="icons/32x32/player.play.png" icon2="icons/32x32/player.pause.png" />
+			<menuitem id="menu.player.next" icon="icons/32x32/player.next.png" />
+			<menuitem id="menu.player.last" icon="icons/32x32/player.last.png" />
+		</menu>
+		<menu id="menu.help">
+			<menuitem id="menu.help.manual" icon="icons/32x32/help.manual.png" />
+			<menuitem id="menu.help.about" icon="icons/32x32/help.about.png" />
+		</menu>
+	</menubar>
+	<contextmenu id="contextmenu.frame">
+		<menuitem id="menu.edit.duplicate" icon="icons/32x32/edit.duplicate.png" />
+		<menuitem id="menu.edit.delete" icon="icons/32x32/edit.delete.png" />
+		<separator />
+		<menuitem id="menu.file.addimage" icon="icons/32x32/file.open.png" />
+		<menuitem id="menu.file.saveas" icon="icons/32x32/file.saveas.png" />
+	</contextmenu>
+</menusandbars>

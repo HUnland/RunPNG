@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Common DTD for menus and bars in RunPNG --> 
+
+<!-- Menubars and menus -->
+<!ELEMENT menusandbars (menubar | contextmenu)* >
+<!ELEMENT menubar (menu)* >
+<!ATTLIST menubar id ID #REQUIRED >
+<!ELEMENT contextmenu (separator | menuitem | dualusemenuitem)* >
+<!ATTLIST contextmenu id ID #REQUIRED >
+<!ELEMENT menu (separator | menuitem | dualusemenuitem)* >
+<!ATTLIST menu id ID #REQUIRED >
+<!ELEMENT menuitem (#PCDATA) >
+<!ATTLIST menuitem
+	id CDATA #REQUIRED
+	icon CDATA #REQUIRED
+	accel CDATA #IMPLIED
+>
+<!ELEMENT dualusemenuitem (#PCDATA) >
+<!ATTLIST dualusemenuitem
+	id CDATA #REQUIRED
+	icon CDATA #REQUIRED
+	id2 CDATA #REQUIRED
+	icon2 CDATA #REQUIRED
+	accel CDATA #IMPLIED
+>
+
+<!-- Toolbars -->
+<!ELEMENT toolbars (toolbar)* >
+<!ELEMENT toolbar (separator | imagebutton | dualuseimagebutton)* >
+<!ATTLIST toolbar id ID #REQUIRED >
+<!ELEMENT imagebutton (#PCDATA) >
+<!ATTLIST imagebutton
+	id CDATA #REQUIRED
+	icon CDATA #REQUIRED
+	tooltip CDATA #IMPLIED
+>
+<!ELEMENT dualuseimagebutton (#PCDATA) >
+<!ATTLIST dualuseimagebutton
+	id CDATA #REQUIRED
+	icon CDATA #REQUIRED
+	id2 CDATA #REQUIRED
+	icon2 CDATA #REQUIRED
+	tooltip CDATA #IMPLIED
+	tooltip2 CDATA #IMPLIED
+>
+
+<!-- Commonly used -->
+<!ELEMENT separator EMPTY >

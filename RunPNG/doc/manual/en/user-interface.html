@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="content">
+	<head>
+		<meta charset="UTF-8">
+		<title>Start</title>
+		<link rel="stylesheet" href="../manual.css" />
+	</head>
+	<body class="content">
+		<div class="contentframe">
+			<div class="contenttitle">
+				<p>Structure of the User Interface</p>
+			</div>
+			<div class="contenttext">
+			
+				<p>RunPNG is set up as a classic desktop application. At the top the title line with the file name and the dimensions of the overall image,
+				then the menu bar with all functions, toolbar with pictograms for quick access without a menu, in the middle left the currently selected image,
+				right a dialog bar with tabs arranged for various settings, below a bar for the loaded single images and a useful footer at the bottom.</p>
+				
+				<img class="hcenter" src="images/the-application.png" width="768" />
+				
+				<p>More about the individual elements later. A few general functions are briefly presented here.</p>
+				
+				<p class="contentsubtitle">File New</p>
+				
+				<div class="hcenter">
+					<img style="float: left; margin-right: 10px;" src="images/menu-file.png" width="266"/>
+					<img src="../images/file-new.png" width="72"/><br clear="all" />
+				</div>
+				
+				<p>With the menu item <b>New</b> or the associated button in the toolbar, the application is reset to its initial state. However, if there are
+				unsaved changes, the user is asked whether they should be saved or whether the process should be canceled.</p>
+				
+				<p class="contentsubtitle">Undo and Redo</p>
+				
+				<div class="hcenter">
+					<img style="float: left; margin-right: 10px;" src="images/menu-edit.png" width="233"/>
+					<img src="../images/undo-redo.png" width="144"/><br clear="all" />
+				</div>
+				
+				<p>Almost all operating steps - except e.g. <b>File New</b>, <b>File Open ...</b> or similar - can be undone by clicking on the menu item
+				or the associated button on the toolbar (alternatively key combination CTRL+Z). An operating step that has been undone can also be redone
+				using the menu or button (alternatively the key combination CTRL+Y).</p>
+
+				<p class="contentsubtitle">Zoom</p>
+				
+				<p>
+					<img class="hcenter" src="images/zoom-combobox.png" width="126"/>
+				</p>
+				
+				<p>The zoom control in the footer relates to the current image display in the middle. Some pictures are rather small, while others are pretty large.
+				So the view can be adjusted with the zoom control.</p>
+				
+				<p class="contentsubtitle">Progress Bar</p>
+				
+				<p>
+					<img class="hcenter" src="images/progressbar.png" width="170"/>
+				</p>
+				
+				<p>A small and inconspicuous <b>Progress</b> bar. This shows the progress of actions like opening or saving files with a growing blue bar.
+				When the action is complete, the color will change to green and then gradually fade away.</p>
+				
+				<p class="contentsubtitle">Language</p>
+				
+				<p>
+					<img class="hcenter" src="images/language-combobox.png" width="200"/>
+				</p>
+				
+				<p>Last but not least the <b>Language</b> setting at the right of the footer. RunPNG is designed to be multilingual right from the start of development.
+				At the moment, however, only German or English is offered. The application is based on the set system language with priority for English. This means, if
+				the system is set to a language other than German, RunPNG starts in English. The language can be switched dynamically at runtime using the selection list.
+
+				<img class="hcenter" src="../images/Blue ball.png" width="80" />
+			</div>
+		</div>
+	</body>
+</html>

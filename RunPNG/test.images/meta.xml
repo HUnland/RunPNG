@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE projectmeta PUBLIC "-//unlixx.de//RunPNG//EN" "projectmeta.dtd">
+<projectmeta software="RunPNG" version="0.1">
+<file comment="Project meta data" name="meta.xml" type="xml" usage="meta"/>
+<meta name="image.width" section="app" value="256"/>
+<meta name="image.height" section="app" value="256"/>
+<file comment="Main sequence frame" index="0" name="sequence.0/frame.0.png" type="png" usage="sequence"/>
+<meta name="delay.num" section="sequence.0/frame.0.png" value="75"/>
+<meta name="delay.den" section="sequence.0/frame.0.png" value="1000"/>
+<file comment="Main sequence frame" index="1" name="sequence.0/frame.1.png" type="png" usage="sequence"/>
+<meta name="delay.num" section="sequence.0/frame.1.png" value="75"/>
+<meta name="delay.den" section="sequence.0/frame.1.png" value="1000"/>
+<file comment="Main sequence frame" index="2" name="sequence.0/frame.2.png" type="png" usage="sequence"/>
+<meta name="delay.num" section="sequence.0/frame.2.png" value="75"/>
+<meta name="delay.den" section="sequence.0/frame.2.png" value="1000"/>
+<file comment="Main sequence frame" index="3" name="sequence.0/frame.3.png" type="png" usage="sequence"/>
+<meta name="delay.num" section="sequence.0/frame.3.png" value="75"/>
+<meta name="delay.den" section="sequence.0/frame.3.png" value="1000"/>
+<file comment="Main sequence frame" index="4" name="sequence.0/frame.4.png" type="png" usage="sequence"/>
+<meta name="delay.num" section="sequence.0/frame.4.png" value="75"/>
+<meta name="delay.den" section="sequence.0/frame.4.png" value="1000"/>
+<file comment="Main sequence frame" index="5" name="sequence.0/frame.5.png" type="png" usage="sequence"/>
+<meta name="delay.num" section="sequence.0/frame.5.png" value="75"/>
+<meta name="delay.den" section="sequence.0/frame.5.png" value="1000"/>
+<file comment="Main sequence frame" index="6" name="sequence.0/frame.6.png" type="png" usage="sequence"/>
+<meta name="delay.num" section="sequence.0/frame.6.png" value="75"/>
+<meta name="delay.den" section="sequence.0/frame.6.png" value="1000"/>
+<file comment="Main sequence frame" index="7" name="sequence.0/frame.7.png" type="png" usage="sequence"/>
+<meta name="delay.num" section="sequence.0/frame.7.png" value="75"/>
+<meta name="delay.den" section="sequence.0/frame.7.png" value="1000"/>
+<file comment="Main sequence frame" index="8" name="sequence.0/frame.8.png" type="png" usage="sequence"/>
+<meta name="delay.num" section="sequence.0/frame.8.png" value="75"/>
+<meta name="delay.den" section="sequence.0/frame.8.png" value="1000"/>
+<file comment="Main sequence frame" index="9" name="sequence.0/frame.9.png" type="png" usage="sequence"/>
+<meta name="delay.num" section="sequence.0/frame.9.png" value="75"/>
+<meta name="delay.den" section="sequence.0/frame.9.png" value="1000"/>
+<file comment="Main sequence frame" index="10" name="sequence.0/frame.10.png" type="png" usage="sequence"/>
+<meta name="delay.num" section="sequence.0/frame.10.png" value="75"/>
+<meta name="delay.den" section="sequence.0/frame.10.png" value="1000"/>
+<file comment="Main sequence frame" index="11" name="sequence.0/frame.11.png" type="png" usage="sequence"/>
+<meta name="delay.num" section="sequence.0/frame.11.png" value="75"/>
+<meta name="delay.den" section="sequence.0/frame.11.png" value="1000"/>
+<file comment="Main sequence frame" index="12" name="sequence.0/frame.12.png" type="png" usage="sequence"/>
+<meta name="delay.num" section="sequence.0/frame.12.png" value="75"/>
+<meta name="delay.den" section="sequence.0/frame.12.png" value="1000"/>
+<file comment="Main sequence frame" index="13" name="sequence.0/frame.13.png" type="png" usage="sequence"/>
+<meta name="delay.num" section="sequence.0/frame.13.png" value="75"/>
+<meta name="delay.den" section="sequence.0/frame.13.png" value="1000"/>
+<file comment="Main sequence frame" index="14" name="sequence.0/frame.14.png" type="png" usage="sequence"/>
+<meta name="delay.num" section="sequence.0/frame.14.png" value="75"/>
+<meta name="delay.den" section="sequence.0/frame.14.png" value="1000"/>
+<file comment="Main sequence frame" index="15" name="sequence.0/frame.15.png" type="png" usage="sequence"/>
+<meta name="delay.num" section="sequence.0/frame.15.png" value="75"/>
+<meta name="delay.den" section="sequence.0/frame.15.png" value="1000"/>
+<file comment="Main sequence frame" index="16" name="sequence.0/frame.16.png" type="png" usage="sequence"/>
+<meta name="delay.num" section="sequence.0/frame.16.png" value="75"/>
+<meta name="delay.den" section="sequence.0/frame.16.png" value="1000"/>
+<file comment="Main sequence frame" index="17" name="sequence.0/frame.17.png" type="png" usage="sequence"/>
+<meta name="delay.num" section="sequence.0/frame.17.png" value="75"/>
+<meta name="delay.den" section="sequence.0/frame.17.png" value="1000"/>
+<file comment="Main sequence frame" index="18" name="sequence.0/frame.18.png" type="png" usage="sequence"/>
+<meta name="delay.num" section="sequence.0/frame.18.png" value="75"/>
+<meta name="delay.den" section="sequence.0/frame.18.png" value="1000"/>
+<file comment="Main sequence frame" index="19" name="sequence.0/frame.19.png" type="png" usage="sequence"/>
+<meta name="delay.num" section="sequence.0/frame.19.png" value="75"/>
+<meta name="delay.den" section="sequence.0/frame.19.png" value="1000"/>
+<meta name="animationtype" section="filesettings" value="ANIMATED"/>
+<meta name="numofframes" section="filesettings" value="20"/>
+<meta name="numofloops" section="filesettings" value="0"/>
+<meta name="imagewidth" section="filesettings" value="256"/>
+<meta name="imageheight" section="filesettings" value="256"/>
+<meta name="sizechangeapplied" section="filesettings" value="NONE"/>
+<meta name="interlaced" section="filesettings" value="false"/>
+<meta name="paletteoptimization" section="filesettings" value="false"/>
+<meta name="background" section="background" value="argb:ffffffcc"/>
+<file comment="Common background" index="0" name="effect.background/background.0.png" type="png" usage="background"/>
+<meta name="scale" section="background" value="VERT"/>
+</projectmeta>

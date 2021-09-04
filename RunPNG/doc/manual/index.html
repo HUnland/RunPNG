@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html class="main">
+	<head>
+		<meta charset="UTF-8">
+		<title>RunPNG Manual</title>
+		<script type="text/javascript">
+			var strLang = navigator.language || navigator.userLanguage,
+				nDash = strLang.indexOf("-");
+			if (nDash > 0)
+			{
+				strLang = strLang.substring(0, nDash);
+			}
+			
+			strLang = strLang.toLowerCase();
+			
+			//alert("language=" + strLang)
+			
+			if (strLang != "de" && strLang != "en")
+			{
+				strLang = "en";
+			}
+			
+			window.location.replace(strLang + "/index.html");
+			
+		</script>
+	</head>
+	<body class="main">
+	</body>
+</html>

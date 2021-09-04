@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Project meta data -->
+
+<!ELEMENT projectmeta (file | meta)+>
+<!ATTLIST projectmeta
+	software CDATA #REQUIRED
+	version CDATA #REQUIRED
+>
+<!ELEMENT meta (#PCDATA)>
+<!ATTLIST meta
+	section CDATA #REQUIRED
+	name CDATA #REQUIRED
+	value CDATA #REQUIRED
+>
+<!ELEMENT file (#PCDATA)>
+<!ATTLIST file
+	type CDATA #REQUIRED
+	usage CDATA #REQUIRED
+	name CDATA #REQUIRED
+	index CDATA #IMPLIED
+	comment CDATA #IMPLIED
+>

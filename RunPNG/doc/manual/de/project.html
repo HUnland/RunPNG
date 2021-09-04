@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="content">
+	<head>
+		<meta charset="UTF-8">
+		<title>Start</title>
+		<link rel="stylesheet" href="../manual.css" />
+	</head>
+	<body class="content">
+		<div class="contentframe">
+			<div class="contenttitle">
+				<p>Projektdatei</p>
+			</div>
+			<div class="contenttext">
+			
+				<p class="contentsubtitle">Der Sinn einer Projektdatei</p>
+				
+				<p>Wenn man in RunPNG eine Sequenz aus Einzelbildern oder eine komplette Animation lädt, dann bleiben die ursprünglichen Einzelbilder
+				im Speicher stets unverändert. Wenn Änderungen stattfinden, geschieht das immer mit einer Kopie für die Darstellung. Auch diese Kopie gibt
+				es nur einmal, um den Speicherbedarf nicht unnötig aufzublähen.</p>
+				
+				<p>Egal wie viele Einzelschritte der Anwender bei seiner Arbeit vornimmt, sie lassen sich entweder mit der Funktion <b>Rückgängig</b>
+				ungeschehen machen, oder der Anwender schaltet die betreffende Option einfach wieder aus.</p>
+				
+				<p>Dieses Verhalten ist zwar schön und nützlich. Doch nachdem die APNG-Datei gespeichert und ein anderes Bild geladen wurde, sind alle
+				Änderungen fix. Denn gespeichert wird nur das Resultat der Arbeit. Von den einzelnen Arbeitsschritten weiß die fertige Datei nichts.</p>
+				
+				<p>An der Stelle kommt die Projektdatei ins Spiel. Die Projektdatei enthält die Einzelbilder und Effektbilder in ihrer ursprünglichen
+				Form und alle Arbeitsschritte, die für die Bildentstehung relevant sind. Sie enthält jedoch nicht den <b>Rückgängig</b>-Speicher und
+				auch keine gelöschten Einzelbilder.</p>
+			
+				<p class="contentsubtitle">Speichern einer Projektdatei</p>
+
+				<div class="hcenter">
+					<img style="float: left; margin-right: 10px;" src="images/menu-file-saveas-project.png" width="266"/>
+					<img src="../images/file-saveas-project.png" width="72"/><br clear="all" />
+				</div>
+
+				<p>Eine Projektdatei zu speichern ist so einfach wie das Bild abzuspeichern. Dazu gibt es den Punkt <b>Speichern als Projekt ...</b> im
+				Menü <b>Datei</b> oder die dazugehörige Schaltfläche in der Werkzeugleiste.</p>
+				
+				<img class="hcenter" src="images/filechooser-saveas-project.png" width="550"/>
+				
+				<p>Das Projekt wird mit der Endung <b>.rpz</b> gespeichert. "rpz" steht für <b>R</b>unPNG <b>P</b>roject <b>Z</b>ipped. Was bereits etwas über
+				die Natur der Datei aussagt. Es handelt sich hierbei nämlich um eine komprimierte ZIP-Datei, die sich ohne Weiteres mit WinZip, 7-Zip
+				und ähnlichen Programmen öffnen ließe. Sie enthält die ursprünglichen Bilder im PNG-Format, sowie Metadaten im XML-Format für die
+				Wiederherstellung der Arbeitsschritte.</p>
+				
+				<p>Doch auch wenn wir hier das vertraute ZIP-Format vorfinden gilt: Nur gucken, nicht anfassen. Genauer gesagt, nichts verändern. Denn das könnte
+				die Projektdatei unbrauchbar machen.</p> 
+
+				<img class="hcenter" src="../images/3d2 256x256.png" width="128" />
+
+			</div>
+		</div>
+	</body>
+</html>
