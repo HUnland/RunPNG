@@ -1,4 +1,0 @@
-Beginnen wir mit ein wenig Geschichte. PNG als Bilddateiformat erschien erst relativ spät auf der Internet-Bühne. Und zwar als Antwort auf Lizenzforderungen,
-die für den Lempel-Ziv-Welch-Algorithmus erhoben wurden welcher im GIF-Dateiformat für die Datenkompression zum Einsatz kommt.
-Im PNG-Format wird statt dessen der lizenzfreie Lempel-Ziv-Algorithmus benutzt. 
-Das ursprünglich angedachte Dateiformat MNG für Animationen konnte sich nicht durchsetzen, weil es laut Browser-Herstellern zu viele Ressourcen verbrauchte.
