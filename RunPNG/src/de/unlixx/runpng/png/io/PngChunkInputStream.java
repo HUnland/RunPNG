@@ -226,7 +226,7 @@ public class PngChunkInputStream extends DataInputStream
 	 */
 	boolean chunkWedge(int nChunkType, int nLen) throws IOException, DataFormatException
 	{
-		System.out.println("Chunk wedge " + PngConstants.chunkTypeName(nChunkType) + " length = " + nLen);
+		//System.out.println("Chunk wedge " + PngConstants.chunkTypeName(nChunkType) + " length = " + nLen);
 
 		if (nLen < 0)
 		{
@@ -330,7 +330,7 @@ public class PngChunkInputStream extends DataInputStream
 	 */
 	void readSignature() throws IOException
 	{
-		System.out.println("Read signature length = 8");
+		//System.out.println("Read signature length = 8");
 
 		for (int n = 0; n < PngConstants.PNG_SIGNATURE.length; n++)
 		{
@@ -525,7 +525,7 @@ public class PngChunkInputStream extends DataInputStream
 
 		int nSequence = readInt_crc();
 
-		System.out.println("fcTL sequence: " + nSequence);
+		//System.out.println("fcTL sequence: " + nSequence);
 
 		if (nSequence != m_nFrameSequenceExpected)
 		{

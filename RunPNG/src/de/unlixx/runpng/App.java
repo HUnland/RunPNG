@@ -808,20 +808,24 @@ public class App extends Application
 			}
 			else if (!bGotAFile)
 			{
-				final File file = new File(str);
-
-				if (file.exists() && file.isFile() && file.canRead())
+				String strCheck = str.toLowerCase();
+				if (strCheck.endsWith(".rpz") || strCheck.endsWith(".png") || strCheck.endsWith(".apng"))
 				{
-					bGotAFile = true;
+					final File file = new File(str);
 
-					Platform.runLater(new Runnable()
+					if (file.exists() && file.isFile() && file.canRead())
 					{
-						@Override
-						public void run()
+						bGotAFile = true;
+
+						Platform.runLater(new Runnable()
 						{
-							m_filemanager.doOpenFiles(new File[]{file});
-						}
-					});
+							@Override
+							public void run()
+							{
+								m_filemanager.doOpenFiles(new File[]{file});
+							}
+						});
+					}
 				}
 			}
 		}

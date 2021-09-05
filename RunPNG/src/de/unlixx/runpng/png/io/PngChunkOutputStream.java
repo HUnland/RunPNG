@@ -294,7 +294,7 @@ public class PngChunkOutputStream extends DataOutputStream
 	 */
 	void write_IHDR(PngHeader header) throws IOException
 	{
-		System.out.println("write IHDR len=" + PngConstants.LENGTH_IHDR);
+		//System.out.println("write IHDR len=" + PngConstants.LENGTH_IHDR);
 
 		m_crc.reset();
 
@@ -321,7 +321,7 @@ public class PngChunkOutputStream extends DataOutputStream
 		byte[] abRGB = palette.getBytes();
 		int nLen = abRGB.length;
 
-		System.out.println("write PLTE len=" + nLen);
+		//System.out.println("write PLTE len=" + nLen);
 
 		m_crc.reset();
 
@@ -342,7 +342,7 @@ public class PngChunkOutputStream extends DataOutputStream
 		byte[] abtRNS = transparency.getBytes();
 		int nLen = abtRNS.length;
 
-		System.out.println("write tRNS len=" + nLen);
+		//System.out.println("write tRNS len=" + nLen);
 
 		m_crc.reset();
 
@@ -362,7 +362,7 @@ public class PngChunkOutputStream extends DataOutputStream
 	 */
 	void write_IDAT(byte[] ab, int nOffs, int nLen) throws IOException
 	{
-		System.out.println("write IDAT len=" + nLen);
+		//System.out.println("write IDAT len=" + nLen);
 
 		m_crc.reset();
 
@@ -382,7 +382,7 @@ public class PngChunkOutputStream extends DataOutputStream
 	 */
 	void write_fdAT(byte[] ab, int nOffs, int nLen) throws IOException
 	{
-		System.out.println("write fDAT len=" + nLen);
+		//System.out.println("write fDAT len=" + nLen);
 
 		m_crc.reset();
 
@@ -403,7 +403,7 @@ public class PngChunkOutputStream extends DataOutputStream
 	 */
 	void write_acTL(PngAnimationControl acTL) throws IOException
 	{
-		System.out.println("write acTL len=" + PngConstants.LENGTH_acTL);
+		//System.out.println("write acTL len=" + PngConstants.LENGTH_acTL);
 
 		m_crc.reset();
 
@@ -422,7 +422,7 @@ public class PngChunkOutputStream extends DataOutputStream
 	 */
 	void write_fcTL(PngFrameControl fcTL) throws IOException
 	{
-		System.out.println("write fcTL len=" + PngConstants.LENGTH_fcTL);
+		//System.out.println("write fcTL len=" + PngConstants.LENGTH_fcTL);
 
 		m_crc.reset();
 
@@ -485,7 +485,7 @@ public class PngChunkOutputStream extends DataOutputStream
 				nLen += abText.length;
 			}
 
-			System.out.println("write tEXt len=" + nLen);
+			//System.out.println("write tEXt len=" + nLen);
 
 			writeInt(nLen);
 			writeInt_crc(nChunkType);
@@ -513,7 +513,7 @@ public class PngChunkOutputStream extends DataOutputStream
 				nLen += abDeflated.length;
 			}
 
-			System.out.println("write zTXt len=" + nLen);
+			//System.out.println("write zTXt len=" + nLen);
 
 			writeInt(nLen);
 			writeInt_crc(nChunkType);
@@ -575,7 +575,7 @@ public class PngChunkOutputStream extends DataOutputStream
 				}
 			}
 
-			System.out.println("write iTXt len=" + nLen);
+			//System.out.println("write iTXt len=" + nLen);
 
 			writeInt(nLen);
 			writeInt_crc(nChunkType);
@@ -614,7 +614,7 @@ public class PngChunkOutputStream extends DataOutputStream
 	 */
 	void write_IEND() throws IOException
 	{
-		System.out.println("write IEND len=" + PngConstants.LENGTH_IEND);
+		//System.out.println("write IEND len=" + PngConstants.LENGTH_IEND);
 
 		m_crc.reset();
 

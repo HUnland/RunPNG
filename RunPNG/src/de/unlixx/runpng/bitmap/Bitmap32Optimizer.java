@@ -445,8 +445,8 @@ public class Bitmap32Optimizer
 			return false;
 		}
 
-		System.out.println("Start");
-		long lStart = System.currentTimeMillis();
+		//System.out.println("Start");
+		//long lStart = System.currentTimeMillis();
 
 		ARGB[] aARGB = analyzer.getDistinctColors();
 
@@ -478,7 +478,7 @@ public class Bitmap32Optimizer
 			}
 		}
 
-		System.out.println("optimizeForPalette: " + (System.currentTimeMillis() - lStart) + " ms");
+		//System.out.println("optimizeForPalette: " + (System.currentTimeMillis() - lStart) + " ms");
 
 		return true;
 	}
