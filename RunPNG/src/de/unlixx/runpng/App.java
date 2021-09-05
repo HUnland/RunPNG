@@ -1,5 +1,7 @@
 package de.unlixx.runpng;
 
+import java.io.File;
+import java.util.List;
 import java.util.Locale;
 
 import de.unlixx.runpng.png.PngAnimationType;
@@ -21,6 +23,7 @@ import de.unlixx.runpng.util.undo.UndoManager;
 import de.unlixx.runpng.util.undo.Undoable;
 import javafx.application.Application;
 import javafx.application.HostServices;
+import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.scene.Cursor;
 import javafx.scene.Node;
@@ -78,7 +81,7 @@ public class App extends Application
 	MenuTool m_menutool = new MenuTool();
 
 	static App m_appMain;
-	static Image m_appIcon = new Image("de/unlixx/runpng/resources/app_icon.png");
+	static Image m_appIcon;
 
 	Stage m_stageApp;
 	Scene m_sceneApp;
@@ -681,6 +684,7 @@ public class App extends Application
 			m_stageApp = stageApp;
 			m_filemanager = new AppFileManager();
 
+			m_appIcon = new Image("de/unlixx/runpng/resources/app_icon.png");
 			stageApp.getIcons().add(m_appIcon);
 
 			m_paneRoot = new BorderPane();
@@ -790,6 +794,37 @@ public class App extends Application
 		});
 
 		Util.checkForUpdate();
+
+		Parameters params = getParameters();
+		List<String> list = params.getRaw();
+
+		boolean bGotAFile = false;
+
+		for (String str : list)
+		{
+			if (str.startsWith("-"))
+			{
+				// Nope yet
+			}
+			else if (!bGotAFile)
+			{
+				final File file = new File(str);
+
+				if (file.exists() && file.isFile() && file.canRead())
+				{
+					bGotAFile = true;
+
+					Platform.runLater(new Runnable()
+					{
+						@Override
+						public void run()
+						{
+							m_filemanager.doOpenFiles(new File[]{file});
+						}
+					});
+				}
+			}
+		}
 	}
 
 	/**
@@ -798,7 +833,7 @@ public class App extends Application
 	public void menuHelpManual()
 	{
 		HostServices hostServices = getHostServices();
-		String strURI = hostServices.getDocumentBase() + "doc/manual/" + Loc.getLanguage() + "/index.html";
+		String strURI = hostServices.getDocumentBase() + "manual/" + Loc.getLanguage() + "/index.html";
 		hostServices.showDocument(strURI);
 	}
 

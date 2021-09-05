@@ -783,9 +783,22 @@ public class AppFileManager
 		File[] afiles = fileOpenDialog(bMultiple ? "title.files.open" : "title.file.open", bMultiple, aext);
 		if (afiles != null)
 		{
-			m_app.doFileNew(false);
+			doOpenFiles(afiles);
+		}
+	}
 
-			if (!bMultiple && afiles[0].getName().toLowerCase().endsWith(".rpz"))
+	/**
+	 * Opens a file or series of files.
+	 *
+	 * @param afiles An array of {@link File} objects to open.
+	 */
+	void doOpenFiles(File[] afiles)
+	{
+		m_app.doFileNew(false);
+
+		if (afiles != null)
+		{
+			if (afiles.length == 1 && afiles[0].getName().toLowerCase().endsWith(".rpz"))
 			{
 				openProjectFile(afiles[0]);
 			}
@@ -798,7 +811,7 @@ public class AppFileManager
 					@Override
 					public void handle(ValueEvent<Bitmap32Sequence> event)
 					{
-						if (!bMultiple)
+						if (afiles.length == 1)
 						{
 							m_filePng = afiles[0];
 						}

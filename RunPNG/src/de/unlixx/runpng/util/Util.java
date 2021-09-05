@@ -462,7 +462,7 @@ public class Util
 	 *
 	 * @param alert The {@link Alert} object.
 	 */
-	protected static void prepareForApp(Alert alert)
+	public static void prepareForApp(Alert alert)
 	{
 		Stage stage = (Stage)alert.getDialogPane().getScene().getWindow();
 		stage.getIcons().add(App.getAppIcon());
