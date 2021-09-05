@@ -23,7 +23,3 @@
 hs_err_pid*
 
 bin/
-
-# Ignore local directories for test ...
-bak/
-test.images/
