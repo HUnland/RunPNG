@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+	Copyright 2021 H. Unland (https://github.com/HUnland)
+	
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	
+	    http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+-->
+<html class="content">
+	<head>
+		<meta charset="UTF-8">
+		<title>Start</title>
+		<link rel="stylesheet" href="../manual.css" />
+	</head>
+	<body class="content">
+		<div class="contentframe">
+			<div class="contenttitle">
+				<p>Was ist RunPNG?</p>
+			</div>
+			<div class="contenttext">
+				<p>RunPNG ist eine Applikation zur Sequenzierung von Bildern um sie aufeinander folgend anzuzeigen. Entweder als eine Art Dia-Show oder auch um bewegte
+				Objekte darzustellen, wie die sich drehenden Würfel am Ende dieser Seite. RunPNG verwendet dazu das APNG-Format.</p>
+
+				<p>Beginnen wir mit ein wenig Geschichte. PNG - für <b>P</b>ortable <b>N</b>etwork <b>G</b>raphics - erschien erst relativ spät auf der digitalen Weltbühne.
+				Und zwar als Antwort auf Lizenzforderungen, die für den patentierten Lempel-Ziv-Welch-Algorithmus (LZW) erhoben wurden. Welcher u. a. im GIF-Dateiformat für die
+				Datenkompression zum Einsatz kommt. Die erste PNG-Spezifikation kam von Thomas Boutell und Tom Lane, welche später von Adam Costello und Glenn Randers-Pehrson
+				erweitert wurde. PNG setzt den etwas älteren - aber patentfreien - Lempel-Ziv-Algorithmus (LZ78) für die verlustfreie Datenkompression ein. Doch ungeachtet dessen
+				ist PNG dem GIF-Format weit überlegen. Während sich GIF auf indexierte Farbpaletten mit maximal 256 Farben samt einer einzigen Transparenz beschränken muss,
+				kann PNG in Vollfarben-, Graustufen- und Transparenzkanälen speichern. Indexierte Farbpaletten verarbeitet es ganz nebenbei auch. Etwas wie die durchscheinenden
+				Würfel von Holger Will wäre mit GIF nur schwer bis gar nicht möglich. So gesehen sind die Lizenzforderungen, über die wir uns damals ausgiebig echauffiert hatten,
+				längst als Gewinn zu verbuchen. Und der Patentschutz für den LZW-Algorithmus lief bereits vor etlichen Jahren ab.</p>
+
+				<p>Für die PNG-Animation definierten die Mozilla-Entwickler Stuart Parmenter und Vladimir Vukicevic das APNG-Dateiformat auf Basis des offenen PNG-Standards.
+				Im Gegensatz zu anderen Ansätzen ist das APNG-Format abwärtskompatibel zum PNG-Format. Was bedeutet, dass ein sauber geschriebener einfacher PNG-Decoder auch
+				das APNG-Format ohne Probleme lesen können sollte. Letzterer wird die nicht verstandenen Blöcke überspringen und sich mit dem Anfangsbild begnügen.
+				Ein APNG-Decoder versteht hingegen auch die APNG-Blöcke und benötigt dafür nur relativ wenig zusätzliche Ressourcen, da viele Algorithmen bereits durch
+				die PNG-Definition vorhanden sind. Die meisten modernen Internet-Browser unterstützen mittlerweile das APNG-Dateiformat.</p>
+				
+				<p>RunPNG besitzt seine eigenen Decoder und Encoder. Einerseits weil die Anwendung über das bloße Darstellen hinaus geht. Andererseits bietet die Laufzeitumgebung
+				Java nur das Lesen und Schreiben von einfachen PNG-Dateien an. Deshalb wurden Decoder und Encoder von Grund auf neu programmiert. RunPNG kann bestehende
+				APNG-Bildsequenzen einlesen, diese dekomprimieren, decodieren und deoptimieren, sowie das Interlace-Format Adam7 entschachteln. Und das Ganze umgekehrt
+				auch wieder speichern. Der Anwender kann mit der Software natürlich auch neue APNG-Dateien erzeugen, indem er eine Sequenz von Einzelbildern zusammenstellt,
+				sie bei Bedarf zuschneidet oder skaliert, für diese eine Darstellungszeit vergibt und die ganze Sequenz als Bild speichert. Zum Testen der Animation
+				steht ein kleiner Abspieler bereit.</p>
+
+				<p>Darüber hinaus lassen sich in RunPNG Effekte wie Hintergrund, Vordergrund oder eine Maske hinzufügen. Auch steht in der vorliegenden Version
+				ein einfacher Bildgenerator zur Verfügung, mit dem der Anwender ein Bild in unterschiedliche Richtungen "fließen" lassen kann.</p>
+				
+				<p>Zu guter Letzt können die ursprünglichen Kollektionen zusammen mit allen Einstellungen und Zusatzbildern als Projekt gespeichert werden, um die
+				Arbeit daran an einem späteren Zeitpunkt wieder aufzunehmen oder nachträglich Änderungen zu machen.</p>
+
+				<p>Nun noch zu der Frage, was RunPNG nicht ist: RunPNG dient nicht zur Bildbearbeitung. Dafür gibt es bereits mächtige Werkzeuge wie Gimp, Inkscape,
+				Photoshop®, Paint.NET und viele mehr. Aber wer weiß? Vielleicht später mal.</p>
+
+				<img class="hcenter" src="../images/3d2 256x256.png" width="150" />
+				
+			</div>
+		</div>
+	</body>
+</html>
