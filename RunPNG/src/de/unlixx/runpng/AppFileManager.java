@@ -647,6 +647,8 @@ public class AppFileManager
 			Bitmap32Sequence sequence = progress.getValue();
 			if (sequence != null)
 			{
+				Bitmap32Optimizer.deoptimize(sequence);
+
 				try
 				{
 					ValueEvent<Bitmap32Sequence> event = new ValueEvent<Bitmap32Sequence>(sequence);

@@ -65,7 +65,7 @@ import javafx.stage.Window;
 public class App extends Application
 {
 	public static final String APP_NAME = "RunPNG";
-	public static final Version APP_VERSION = new Version(0, 1);
+	public static final Version APP_VERSION = new Version(0, 1, 0);
 
 	public static final int MIN_IMAGE_WIDTH = 1;
 	public static final int MIN_IMAGE_HEIGHT = 1;

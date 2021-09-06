@@ -1,7 +1,7 @@
 package de.unlixx.runpng.util;
 
 /**
- * Immutable version number (major.minor)
+ * Immutable version number (major.minor.patch)
  *
  * @author Hans-Josef Unland
  */
@@ -31,17 +31,20 @@ public class Version
 {
 	final int m_nMajor;
 	final int m_nMinor;
+	final int m_nPatch;
 
 	/**
 	 * Constructor of a Version object.
 	 *
 	 * @param nMajor An int containing the major value.
 	 * @param nMinor An int containing the minor value.
+	 * @param nPatch An int containing the patch level.
 	 */
-	public Version(int nMajor, int nMinor)
+	public Version(int nMajor, int nMinor, int nPatch)
 	{
 		m_nMajor = nMajor;
 		m_nMinor = nMinor;
+		m_nPatch = nPatch;
 	}
 
 	/**
@@ -60,6 +63,16 @@ public class Version
 	 * @return The minor number as an int.
 	 */
 	public int getMinor()
+	{
+		return m_nMajor;
+	}
+
+	/**
+	 * Gets the patch level.
+	 *
+	 * @return The minor number as an int.
+	 */
+	public int getPatch()
 	{
 		return m_nMajor;
 	}
@@ -85,6 +98,11 @@ public class Version
 				return m_nMinor < version.m_nMinor ? -1 : 1;
 			}
 
+			if (m_nPatch != version.m_nPatch)
+			{
+				return m_nPatch < version.m_nPatch ? -1 : 1;
+			}
+
 			return 0;
 		}
 
@@ -96,7 +114,7 @@ public class Version
 	{
 		if (o instanceof Version)
 		{
-			return ((Version)o).m_nMajor == m_nMajor && ((Version)o).m_nMinor == m_nMinor;
+			return ((Version)o).m_nMajor == m_nMajor && ((Version)o).m_nMinor == m_nMinor && ((Version)o).m_nPatch == m_nPatch;
 		}
 
 		return false;
@@ -105,25 +123,34 @@ public class Version
 	/**
 	 * Gets a Version object from a string.
 	 *
-	 * @param str A string containing a version number (major.minor).
+	 * @param str A string containing a version number (major.minor.patch).
 	 * @return An instance of Version.
 	 */
 	public static Version valueOf(String str)
 	{
-		int nMajor = -1,
-			nMinor = 0;
+		int[] anVer = new int[] {-1, 0, 0};
 
 		if (str != null)
 		{
-			int nPos = str.indexOf('.');
-			if (nPos > 0)
+			for (int n = 0; n < 3; n++)
 			{
-				nMajor = Util.toInt(str.substring(0, nPos), -1);
-				nMinor = Util.toInt(str.substring(nPos + 1), 0);
+				int nPos = str.indexOf('.');
+				if (nPos > 0)
+				{
+					anVer[n] = Util.toInt(str.substring(0, nPos), -1);
+					str = str.substring(nPos + 1);
+				}
+				else
+				{
+					anVer[n] = Util.toInt(str, -1);
+
+					// Nothing more to read
+					break;
+				}
 			}
 		}
 
-		return new Version(nMajor, nMinor);
+		return new Version(anVer[0], anVer[1], anVer[2]);
 	}
 
 	/**
@@ -133,12 +160,12 @@ public class Version
 	 */
 	public boolean isValid()
 	{
-		return m_nMajor >= 0;
+		return m_nMajor >= 0 && m_nMinor >= 0 && m_nPatch >= 0;
 	}
 
 	@Override
 	public String toString()
 	{
-		return "" + m_nMajor + "." + m_nMinor;
+		return "" + m_nMajor + "." + m_nMinor + "." + m_nPatch;
 	}
 }
