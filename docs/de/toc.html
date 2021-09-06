@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+	Copyright 2021 H. Unland (https://github.com/HUnland)
+	
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	
+	    http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+-->
+<html class="toc">
+	<head>
+		<meta charset="UTF-8">
+		<title>Inhaltsverzeichnis</title>
+		<link rel="stylesheet" href="../manual.css" />
+		<script type="text/javascript">
+			function sendToParent(strPurpose, strItem)
+			{
+				var data = new Object();
+				data.source = "toc";
+				data.purpose = strPurpose;
+				data.item = strItem;
+				parent.postMessage(data, "*");
+			}
+		
+			function tocItemClick(element, strItem)
+			{
+				var ul = element.parentElement;
+				
+				for (var n = 0, nLen = ul.children.length; n < nLen; n++)
+				{
+					var li = ul.children[n];
+					li.classList.remove("selected");
+				}
+				
+				element.classList.add("selected");
+				
+				sendToParent("item-click", strItem);
+			}
+			
+			function initialize()
+			{
+				tocItemClick(document.getElementById('start'), 'start');
+			}
+
+		</script>
+	</head>
+	<body class="toc" onload="initialize()">
+		<div class="toc title">
+			<p>Inhaltsverzeichnis</p>
+		</div>
+		<ul class="toc" id="toc">
+			<li class="toc item" id="start" onclick="tocItemClick(this, 'start')">
+				<p>Start</p>
+			</li>
+			<li class="toc item" onclick="tocItemClick(this, 'what-is-runpng')">
+				<p>Was ist RunPNG?</p>
+			</li>
+			<li class="toc item" onclick="tocItemClick(this, 'user-interface')">
+				<p>Bedienungsoberfläche</p>
+			</li>
+			<li class="toc item" onclick="tocItemClick(this, 'a-first-animation')">
+				<p>Eine erste Animation</p>
+			</li>
+			<li class="toc item" onclick="tocItemClick(this, 'frames-handling')">
+				<p>Einzelbildbehandlung</p>
+			</li>
+			<li class="toc item" onclick="tocItemClick(this, 'frame-sizes')">
+				<p>Bildgrößen</p>
+			</li>
+			<li class="toc item" onclick="tocItemClick(this, 'optimization')">
+				<p>Bilder optimieren</p>
+			</li>
+			<li class="toc item" onclick="tocItemClick(this, 'project')">
+				<p>Projektdatei</p>
+			</li>
+			<li class="toc item" onclick="tocItemClick(this, 'effects')">
+				<p>Effekte</p>
+			</li>
+			<li class="toc item indent1" onclick="tocItemClick(this, 'effect-background')">
+				<p>Hintergrund</p>
+			</li>
+			<li class="toc item indent1" onclick="tocItemClick(this, 'effect-foreground')">
+				<p>Vordergrund</p>
+			</li>
+			<li class="toc item indent1" onclick="tocItemClick(this, 'effect-mask')">
+				<p>Maske</p>
+			</li>
+			<li class="toc item indent1" onclick="tocItemClick(this, 'generator-float')">
+				<p>Flussgenerator</p>
+			</li>
+		</ul>
+	</body>
+</html>
