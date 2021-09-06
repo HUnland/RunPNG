@@ -1,6 +1,6 @@
 # RunPNG
 An application to create, read and write animated PNG files.  
-It is written purely in Java / JavaFX and runs on a JRE 8 environment.
+It is written purely in Java / JavaFX and runs on a JRE 8 (1.8) environment.
 
 You will find a manual at https://hunland.github.io/RunPNG/
 
